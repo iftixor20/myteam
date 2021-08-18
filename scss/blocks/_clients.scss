@@ -1,0 +1,48 @@
+/* CLIENTS */
+
+.clients {
+  padding: 140px 0;
+  background-color: var(--color-green-sacramento);
+  text-align: center;
+}
+
+.clients__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.clients__inner::before {
+  content: "";
+  position: absolute;
+  top: -140px;
+  left: -165px;
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  background: url(../../img/bg-clients.svg) center / contain no-repeat;
+}
+
+.clients-heading {
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+.clients__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.clients__item {
+  flex-shrink: 0;
+}
+
+.clients__item:not(:last-child) {
+  margin-right: 80px;
+}
+
+.client-logo {
+  display: block;
+}

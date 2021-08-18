@@ -1,0 +1,251 @@
+/* ABOUT-HERO */
+
+.about-hero {
+  padding-top: 45px;
+  padding-bottom: 120px;
+  background-color: var(--color-green-midnight);
+  overflow: hidden;
+}
+
+.about-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-hero__inner::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -265px;
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  background: url(../img/bg-about-hero.svg) center / contain no-repeat;
+}
+
+.about-hero-heading {
+  margin-right: 30px;
+  flex-shrink: 0;
+}
+
+/* DIRECTORS */
+
+.directors {
+  padding: 140px 0;
+  text-align: center;
+  background-color: var(--color-green-deep-jungle);
+  overflow: hidden;
+}
+
+.directors__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.directors__inner::before {
+  content: "";
+  position: absolute;
+  top: -140px;
+  left: -265px;
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  background: url(../img/bg-directors-left.svg) center / contain no-repeat;
+}
+
+.directors__inner::after {
+  content: "";
+  position: absolute;
+  bottom: -140px;
+  right: -165px;
+  z-index: -1;
+  width: 147px;
+  height: 100px;
+  background: url(../img/bg-directors-right.svg) center / contain no-repeat;
+}
+
+.directors-heading {
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+.directors__list {
+  margin: 0;
+  margin-right: -30px;
+  padding: 0;
+  padding-bottom: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  row-gap: 76px;
+  list-style: none;
+}
+
+.direstors__item {
+  margin-right: 30px;
+}
+
+.director {
+  position: relative;
+  z-index: 1;
+  width: 350px;
+  perspective: 1000px;
+}
+
+.director__side {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform .7s ease;
+}
+
+.director__side--front {
+  padding: 32px 24px 56px;
+  background-color: var(--color-green-sacramento);
+}
+
+.director__side--back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding: 35px 48px 63px;
+  transform: rotateY(180deg);
+  background-color: var(--color-green-dark);
+}
+
+.director__side--back::-webkit-scrollbar {
+  width: 10px;
+}
+
+.director__side--back::-webkit-scrollbar-thumb {
+  background-color: var(--color-green-midnight);
+}
+
+.director__side--back .director__name {
+  margin-bottom: 8px;
+}
+
+.director__quote {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.director__quote-text {
+  margin: 0;
+}
+
+.director-social__list {
+  margin: 0 auto;
+}
+
+.director__avatar {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.director__name {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--color-blue-rapture);
+}
+
+.director__job {
+  margin: 0;
+  font-style: italic;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.director__toggle {
+  position: absolute;
+  bottom: -28px;
+  left: calc(50% - 28px);
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  background: var(--color-red-coral) url("../img/icon-plus.svg") center / 16px
+    no-repeat;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.7s ease,
+    transform .7s ease;
+}
+
+.director__toggle:hover {
+  background-color: var(--color-blue-rapture);
+}
+
+.director--flipped .director__side--front {
+  transform: rotateY(-180deg);
+}
+
+.director--flipped .director__side--back {
+  transform: rotateY(0);
+}
+
+.director--flipped .director__toggle {
+  transform: rotate(-45deg);
+  background-color:  var(--color-blue-rapture);
+}
+
+.director--flipped .director__toggle:hover {
+  background-color: var(--color-red-coral);
+}
+
+/* CLIENTS */
+
+.clients {
+  padding: 140px 0;
+  background-color: var(--color-green-sacramento);
+  text-align: center;
+}
+
+.clients__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.clients__inner::before {
+  content: "";
+  position: absolute;
+  top: -140px;
+  left: -165px;
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  background: url(../img/bg-clients.svg) center / contain no-repeat;
+}
+
+.clients-heading {
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+.clients__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.clients__item {
+  flex-shrink: 0;
+}
+
+.clients__item:not(:last-child) {
+  margin-right: 80px;
+}
+
+.client-logo {
+  display: block;
+}

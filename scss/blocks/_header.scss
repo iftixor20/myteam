@@ -1,0 +1,31 @@
+/* ABOUT-HERO */
+
+.about-hero {
+  padding-top: 45px;
+  padding-bottom: 120px;
+  background-color: var(--color-green-midnight);
+  overflow: hidden;
+}
+
+.about-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-hero__inner::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -265px;
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  background: url(../../img/bg-about-hero.svg) center / contain no-repeat;
+}
+
+.about-hero-heading {
+  margin-right: 30px;
+  flex-shrink: 0;
+}

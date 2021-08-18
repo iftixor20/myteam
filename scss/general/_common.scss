@@ -1,0 +1,179 @@
+/* VARIABLES */
+
+:root {
+  --color-text-primary: #fff;
+  --color-green-midnight: #014e56;
+  --color-green-dark: #002529;
+  --color-green-deep-jungle: #004047;
+  --color-green-sacramento: #012f34;
+  --color-blue-rapture: #79c8c7;
+  --color-red-coral: #f67e7e;
+  --color-secondary-police-blue: #2c6269;
+}
+
+/* COMPONENTS */
+
+.heading-primary {
+  margin: 0;
+  width: 350px;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 100px;
+}
+
+.heading-secondary {
+  margin: 0;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.paragraph {
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.paragraph::before {
+  content: "";
+  display: block;
+  margin-bottom: 40px;
+  width: 50px;
+  height: 4px;
+  $background-color: #f67e7e;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 33px;
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: none;
+  text-transform: lowercase;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 24px;
+  transition: 0.3s ease;
+  transition-property: color, background-color;
+  cursor: pointer;
+}
+
+.btn--disabled,
+.btn:disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.btn--light {
+  color: var(--color-text-primary);
+  border-color: var(--color-text-primary);
+}
+
+.btn--light:hover {
+  color: var(--color-green-dark);
+  background-color: var(--color-text-primary);
+}
+
+.btn--dark {
+  color: var(--color-green-sacramento);
+  border-color: var(--color-green-sacramento);
+}
+
+.btn--dark:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-green-sacramento);
+}
+
+.btn--secondary {
+  color: var(--color-green-dark);
+  background-color: var(--color-text-primary);
+  border: none;
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-blue-rapture);
+}
+
+/* @FONT-FACE */
+
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/Livvic-Bold.woff2") format("woff2"),
+    url("../fonts/Livvic-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/Livvic-SemiBold.woff2") format("woff2"),
+    url("../fonts/Livvic-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/Livvic-MediumItalic.woff2") format("woff2"),
+    url("../fonts/Livvic-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* STICKY FOOTER */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1 0 auto;
+}
+
+.site-footer {
+  flex-shrink: 0;
+}
+
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: $project-font, "Arial", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
